@@ -1,6 +1,7 @@
 package com.solegendary.reignofnether.registrars;
 
 import com.solegendary.reignofnether.ReignOfNether;
+import com.solegendary.reignofnether.block.CrackedStoneBrickStairs;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -40,7 +41,10 @@ public class BlockRegistrar {
             CreativeModeTab.TAB_BUILDING_BLOCKS
     );
 
-
+    public static final RegistryObject<Block> CRACKED_STONE_BRICk_STAIRS = registerBlock("cracked_stone_brick_stairs",
+            CrackedStoneBrickStairs::new,
+            CreativeModeTab.TAB_BUILDING_BLOCKS
+    );
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);
