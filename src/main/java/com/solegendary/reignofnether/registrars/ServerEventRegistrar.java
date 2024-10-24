@@ -37,4 +37,5 @@ public class ServerEventRegistrar {
         vanillaEventBus.register(FogOfWarServerEvents.class);
         vanillaEventBus.register(ResearchServerEvents.class);
     }
+
 }

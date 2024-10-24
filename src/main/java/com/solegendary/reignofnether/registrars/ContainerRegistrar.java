@@ -16,6 +16,7 @@ public class ContainerRegistrar {
     public static final RegistryObject<MenuType<TopdownGuiContainer>> TOPDOWNGUI_CONTAINER = CONTAINERS
             .register("topdowngui_container", () -> new MenuType<>(TopdownGuiContainer::new));
 
+
     public static void init() {
         CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
